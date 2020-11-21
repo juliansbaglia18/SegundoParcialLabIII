@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segundo Parcial</title>
+    <link rel="stylesheet" href="./css/estilo.css">
+    <script src="./ts-js/interfaceVehiculo.js"></script>
+    <script src="./ts-js/Auto.js"></script>
+    <script src="./ts-js/Camioneta.js"></script>
+    <script src="./ts-js/Funciones.js"></script>
+</head>
+<body>
+    <input type="button" value="Alta" id="btnAbrir" class="btnAbrir">
+
+    <div class="contenedor" id="divContenedor" hidden>
+        <h3>Cargar nuevo auto</h3>
+        <input type="button" value="X" id="btnCerrar" class="btnCerrar"/><br>
+        <label for="marca">Id:</label> 
+        <input type="text" id="idAuto" >
+        <label for="marca">Marca:</label> 
+        <input type="text" name="" placeholder="Ingresa la marca" class="inpuSinError" id="txtMarca">
+        <label for="modelo">Modelo:</label> 
+        <input type="text" name="" placeholder="Ingresa el modelo" class="inpuSinError" id="txtModelo">
+        <label for="modelo">Precio:</label> 
+        <input type="text" name="" placeholder="Ingresa el precio" class="inpuSinError" id="txtPrecio">
+        
+        <label for="tipo">Tipo:</label> <br>
+        <select name="tipo" id="slcTipo" class="slc">
+            <option value="auto" selected>Auto</option>
+            <option value="camioneta">Camioneta</option> 
+        </select><br><br>
+        
+        <div class="btns">    
+            <input type="button" value="Guardar" id="btnGuardar" class="btnContenedor"/>
+        </div>
+    </div>
+
+
+    <label for="filtro">Filtrar por tipo:</label>
+    <select name="filtro" id="slcFiltro" class="slc">
+        <option value="nada" selected>Sin filtro</option>
+        <option value="auto" >Auto</option>
+        <option value="camioneta">Camioneta</option> 
+    </select>
+    
+    <label >Calcular promedio:</label>
+    <input type="text" name="" placeholder="-" id="promedio" class="promedio">
+
+        <input type="button" value="Promediar" name="Promedio" id="btnPromedio">
+
+    <h2>Lista de Autos</h2>
+    <table id="tableAutos">
+        <thead>
+            <tr>
+                <th hidden=false id="tableId">id</th>
+                <!-- <th>id</th> -->
+                <th id="idTable">Id</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Precio</th>
+                <th>Accion</th>
+            </tr>
+        </thead>
+        <tbody id="tcuerpo"></tbody>
+    </table>
+</body>
+</html>
